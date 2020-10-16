@@ -274,7 +274,7 @@ footer ul li a {
     }
     .container .box2 {
         margin:0 auto;
-        padding:200px 75px 195px 75px;
+        padding:200px 75px 195px 0;
         border-top:1px solid #fff;
         width:calc(100% - 150px);
         box-sizing: border-box;
