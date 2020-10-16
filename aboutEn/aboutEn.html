@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <meta property="og:title" content="엄세경의 포트폴리오">
+    <meta property="og:description" content="안녕하세요 제대로 모시겠습니다">
+    <meta property="og:image" content="https://mayum.dothome.co.kr/images/opIMG.png">
+    <meta property="og:url" content="https://mayum.dothome.co.kr">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="엄세경의 포트폴리오">
+    <meta name="twitter:url" content="https://mayum.dothome.co.kr">
+
+    <link rel="stylesheet" href="../common/normalize.css">
+    <link rel="stylesheet" href="../common/aos.css">
+    <link rel="stylesheet" href="aboutEn.css">
+    <title>엄세경 포트폴리오</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-ui-dist@1.12.1/jquery-ui.min.js"></script>
+    <script src="../common/aos.js"></script>
+    <script>
+        $(function(){
+            var dots = [],
+                mouse = {
+                x: 0,
+                y: 0
+                };
+    
+            var Dot = function() {
+            this.x = 0;
+            this.y = 0;
+            this.node = (function(){
+                var n = document.createElement("div");
+                n.className = "trail";
+                document.body.appendChild(n);
+                return n;
+            }());
+            };
+    
+            Dot.prototype.draw = function() {
+            this.node.style.left = this.x + "px";
+            this.node.style.top = this.y + "px";
+            };
+    
+            for (var i = 0; i < 12; i++) {
+            var d = new Dot();
+            dots.push(d);
+            }
+    
+            function draw() {
+            var x = mouse.x,
+                y = mouse.y;
+                
+            dots.forEach(function(dot, index, dots) {
+                var nextDot = dots[index + 1] || dots[0];
+                    
+                dot.x = x;
+                dot.y = y;
+                dot.draw();
+                x += (nextDot.x - dot.x) * .6;
+                y += (nextDot.y - dot.y) * .6;
+    
+            });
+            }
+    
+            addEventListener("mousemove", function(event) {
+            mouse.x = event.pageX;
+            mouse.y = event.pageY;
+            });
+    
+            function animate() {
+            draw();
+            requestAnimationFrame(animate);
+            }
+
+            animate();
+    
+         $('a[href="#"').on('click',function(e){
+          e.preventDefault();
+         });
+          $('footer li').eq(0).on('click',function(){
+            $('html, body').animate({ scrollTop:0 },900);
+          });
+
+          AOS.init();
+        });
+        </script>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li><a href="aboutEn.html">UM SEKYUNG</a></li>
+            <li><a href="../index.html">KOR</a></li>
+            <li><a href="../aboutCn/aboutCn.html">CN</a></li>
+            <li><a href="navEn.html"><img src="../images/nav_.svg" alt="bar"></a></li>
+        </ul>
+        <nav></nav>
+    </header>
+    <div class="container">
+        <div class="box1">
+            <p>#WebDesign #Publishing #Package #EditorialDesign</p>
+            <h1>M</h1>
+            <h3>ABOUT</h3>
+            <div class="profile">
+                <p>1992 - 05 - 26</p>
+                <p>Pyeongtaek-si Gyeonggi-do<br>KOREA</p>
+                <p>E-MAIL. mayum5@hanmail.net</p>
+                <p>INSTA. oooooo</p>
+                <p>TELL. 010 5699 0897</p>
+            </div><!-- profile -->
+        </div><!-- box1 -->
+        <div class="blackbg">
+        <div class="box2">
+            <div class="mobile" data-aos="fade-up">
+                <p>I'm an<br><strong>editorial designer.</strong></p>
+                <p>
+                    I usually work on<br>
+                    brochures, posters, catalogs, etc.<br>
+                    Due to my work experience in design,<br>
+                    I am interested in trying my hands at<br><strong> web design, publishing,UI/UX design.</strong><br>I am trying to learn<br><strong>new things and crafting them as my niche skill sets.</strong></p>
+                <p data-aos="fade-up">I pursue freedom, I love adventure.<br>I always try to create beautiful and innovative <br>works that are aesthetically beautiful.</p>
+            </div><!-- box2 mobile -->
+            <div class="pc" data-aos="fade-up">
+                <p>I'm an <strong>editorial designer.</strong><br>
+                    I usually work on brochures, posters, catalogs, etc.<br>Due to my work experience in design,<br>I am interested in trying my hands at<br><strong> web design, publishing,UI/UX design.</strong><br>I'm trying to learn<br><strong>new things and crafting them as my niche skill sets.</strong></p>
+                    <p data-aos="fade-up">I pursue freedom, I love adventure.<br>I always try to create beautiful and innovative works that are aesthetically beautiful.</p>
+                </div><!-- box2 pc -->
+        </div><!-- box2 -->
+        </div><!-- blackbg -->
+        <div class="box3">
+        <div class="roundimg">
+        </div><!-- roundimg -->
+        </div><!-- box3 -->
+        <div class="box4">
+            <h3>Design Skills</h3>
+            <p><strong>UI/UX Design</strong>  Adobe Xd<br>User Research, Wireframing, Prototyping</p>
+            <p><strong>Visual Design</strong>  Photoshop, Illustrator, Indesign<br>Packages, Posters, Catalogs, Brochures, Logo</p>
+            <p><strong>Programming</strong>  HTML, CSS3, Java script & jQuery<br>Responsive Web</p>
+        </div><!-- box4 -->
+        <div class="box5">
+            <h3>Experience</h3>
+            <p>KOREA PEACE ART COMPETITION<br>ADVERTISING DESIGN<strong> SPECIAL PRIZE</strong></p>
+            <p>SOKI INTERNATIONAL DESIGN &<br>ILLUSTRATION COMPETTTION<strong> PRIZE</strong></p>
+            <p>SOKI INTERNATIONAL DESIGN &<br>ILLUSTRATION COMPETTTION<strong> PRIZE</strong></p>
+            <p>2015 - 2019 Editional Designer</p>
+        </div><!-- box5 -->
+    </div> <!-- container -->
+    <footer>
+        <ul>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="navEn.html">WORKS</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
