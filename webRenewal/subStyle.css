@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/* 모바일 */
+html, body, ul, li, a {
+    font-family:"Helvetica Neue","Apple SD Gothic Neo",sans-serif; color:#58585b; margin:0; padding:0; text-decoration:none;
+}
+header {
+    height:75px;
+    position:relative;
+    background-image:url(images/bars-solid.svg);
+    background-repeat:no-repeat;
+    background-size:20px;
+    background-position:335px 28px;
+}
+header h1 {
+    margin:0;
+}
+header h1 img {
+    width:138px;
+    position:absolute;
+    top:25px; left:20px;
+}
+header .nav {
+    display:none;
+}
+.container > .box1 {
+    background-image:url(images/brandbg.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position-x:50%;
+    height:200px;
+}
+.container h1 {
+    margin-top:50px;
+    text-align:center;
+}
+.container .contents .map {
+    background-image:url(images/brandMap.png);
+    background-repeat:no-repeat;
+    background-position-x:50%;
+    background-size:90%;
+    width:100%; height:400px;
+}
+.contents div h4 {
+    font-size:20px;
+    margin-bottom:10px;
+}
+.contents div h5 {
+    font-size:15px;
+    margin:0;
+}
+.contents div {
+    padding:0 15px;
+    text-align:justify;
+    line-height:1.5;
+    font-size:15px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:50px;
+}
+.contents div img {
+    display:block;
+    margin:0 auto;
+    margin-top:50px;
+}
+footer {
+    height:130px;
+    text-align:center;
+    font-size:13px;
+    clear:both;
+    line-height:130px;
+}
+
+@media (min-width:1440px) {
+    header {
+        width:1290px; height:100px;
+        background-image:url(images/bars-solid.svg);
+        background-repeat:no-repeat;
+        background-position:-9999px;
+        margin:0 auto;
+        }
+        header h1 img {
+            width:138px;
+            position:absolute;
+            top:35px; left:0;
+        }
+        header .nav {
+            display:block;
+            float:right;
+        }
+        header .nav li {
+            float:left;
+            width:150px;
+            text-align:center;
+            line-height:100px;
+            list-style:none;
+        }
+        header .nav li a {
+            color:inherit;
+            text-decoration:none;
+        }
+        header .nav li a:hover {
+            font-weight:bold;
+            text-decoration:underline;
+        }
+        .container > .box1 {
+            background-image:url(images/brandbg.jpg);
+            background-repeat:no-repeat;
+            background-size:cover;
+            width:1290px; height:450px;
+            display:block;
+            margin:0 auto;
+        }
+        .container h1 {
+            margin:92px 0;
+        }
+        .container .contents {
+            width:1290px; margin:0;
+            margin:0 auto;
+        }
+        .container .contents .mapbox {
+            width:450px; height:2600px;
+            float:left; padding:0;
+        }
+        .container .contents .mapbox .map {
+            background-image:url(images/brandMap.png);
+            background-repeat:no-repeat;
+            padding:0;
+            display: inline-block;
+            position: sticky;
+            top: 100px;
+
+        }
+        .contents div {
+            width:800px;
+            padding:0;
+            text-align:justify;
+            line-height:1.5;
+            float:left;
+            box-sizing:border-box;
+            border-bottom:transparent;
+        }
+        .contents div > .imgbox {
+            width:200px; height:350px;
+            padding:0;
+            margin-right:20px;
+        }
+        .contents div img {
+            display:block;
+            margin:0; margin-top:120px;
+            width:200px;            
+            
+        }
+        .container footer {
+            clear:both;
+            display:block;
+            height:45px;
+            background-color:#282b32;
+            color:#fff;
+            text-align:center;
+            line-height:45px;
+        }
+}
