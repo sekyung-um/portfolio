@@ -42,11 +42,14 @@
             $("#slide6").on("click",function(){
                 $("#box1").css({"background":"url(images/img5.jpg)","backgroundSize":"cover"});
                 });
-            $('.add').click(function () {
+            /** $('.add').click(function () {
                 if ($(this).prev().val() < 10) {
                 $(this).prev().val(+$(this).prev().val() + 1);
                 }
-            });
+            });**/
+		$("add").click("keyup mouseup", function () {
+		  $("this").html($("input").val() * defaultValue);
+		});
             $('.sub').click(function () {
                     if ($(this).next().val() > 1) {
                     if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
