@@ -335,8 +335,6 @@ footer {
     .container .box5 .chapter2 { order:2; }
     .container .box5 .chapter3 { order:3; }
     .container .box5 .chapter4 { order:4; }
-    .container .contents {
-    }
     .container .contents .grain {
         width:1290px; height:500px;
         margin:0 auto; padding-top:200px;
