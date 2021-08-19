@@ -24,7 +24,11 @@
     <script src="common/aos.js"></script>
     <script>
         
-
+            function animate() {
+            draw();
+            requestAnimationFrame(animate);
+            } 
+            animate();
      
          $('a[href="#"').on('click',function(e){
           e.preventDefault();
