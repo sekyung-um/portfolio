@@ -58,8 +58,8 @@
         dots.forEach(function(dot, index, dots) {
             var nextDot = dots[index + 1] || dots[0];
                 
-            dot.x = x + 3;
-            dot.y = y + 3;
+            dot.x = x +3 ;
+            dot.y = y +3 ;
             dot.draw();
             x += (nextDot.x - dot.x) * .6;
             y += (nextDot.y - dot.y) * .6;
