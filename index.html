@@ -58,8 +58,8 @@
                 
             dots.forEach(function(dot, index, dots) {
                 var nextDot = dots[index + 1] || dots[0];
-                dot.x = x;
-                dot.y = y;
+                dot.x = x +3 ;
+                dot.y = y +3 ;
                 dot.draw();
                 x += (nextDot.x - dot.x) * .6;
                 y += (nextDot.y - dot.y) * .6;
@@ -67,8 +67,8 @@
             }
     
             addEventListener("mousemove", function(event) {
-            mouse.x = event.pageX +5;
-            mouse.y = event.pageY +5;
+            mouse.x = event.pageX;
+            mouse.y = event.pageY;
             });
     
             function animate() {
