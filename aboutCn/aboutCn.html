@@ -52,14 +52,14 @@
         }
 
         function draw() {
-        var x = mouse.x + 5,
-            y = mouse.y + 5;
+        var x = mouse.x,
+            y = mouse.y;
             
         dots.forEach(function(dot, index, dots) {
             var nextDot = dots[index + 1] || dots[0];
                 
-            dot.x = x;
-            dot.y = y;
+            dot.x = x + 5;
+            dot.y = y + 5;
             dot.draw();
             x += (nextDot.x - dot.x) * .6;
             y += (nextDot.y - dot.y) * .6;
